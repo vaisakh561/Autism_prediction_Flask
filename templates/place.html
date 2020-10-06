@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <title>Autism | Flask</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+<center><img src="{{ url_for('static',filename='img2.png') }}" width="1000" height="150" alt="" /></center>
+</head>
+  <body  bgcolor="tomato">
+   <div class="container">
+  <form id="contact" action="/placefind" method="post" role="form">
+    <center><h1><bold>SEARCH FOR HOSPITALS </bold></h1></center>
+    
+
+    <fieldset>
+      <center><h4>select option below to find the nearest hospital</h4></center>
+      <!-- <input placeholder="if Yes means 0 No means 1" name = "q1" type="text" tabindex="1" required autofocus> -->
+      <center><select name="cities" width="300"  height="800" required>
+        <!-- <option  value="0">Select option</option> -->
+        <option value="JAYANAGAR">Jayanagar</option>
+        <option value="YELAHANKA">Yelahanka</option>
+        <option value="MAJESTIC">Majestic</option>
+        <option value="KORAMANGALA">Koramangala</option>
+        <option value="INDIRA NAGAR">Indranagar</option>
+        <option value="ELECTRONIC CITY">Electronic City</option>
+   </select>
+    </center>
+    </fieldset>
+
+<br> <br> <br>
+    
+
+    <fieldset>
+      <center>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </center>
+    </fieldset>
+
+  </form>
+</div>
+
+<style>
+    select {
+        width: 200px;
+        height: 30px;
+        margin: 10px;
+    }
+    select:focus {
+        min-width: 200px;
+        width: auto;
+    }    
+</style>
+  </body>
+</html>

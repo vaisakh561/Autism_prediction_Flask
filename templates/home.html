@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <title>Autism | Flask</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+<center><img src="{{ url_for('static',filename='Title.png') }}" width="1000" height="150" alt="" /></center>
+</head>
+  <body>
+   <div class="container">
+  <form id="contact" action="/predict" method="post" role="form">
+    <center>
+    <h1><bold>Autism Spectrum Disoder</bold></h1>
+    <h4>Enter the Answen for all the question</h4>
+
+    <fieldset>
+      <h4>1) Does your child look at you when you call his/her name?</h4>
+      <!-- <input placeholder="if Yes means 0 No means 1" name = "q1" type="text" tabindex="1" required autofocus> -->
+      <select name="q1" required>
+        <option  value="0">Yes</option>
+        <option value="1">No</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <h4>2) How easy is it for you to get eye contact with your child?</h4>
+      <!-- <input placeholder="if Yes means 0 No means 1" name = "q2" type="text" tabindex="1" required autofocus> -->
+      <select name="q2" >
+        <option  value="0">Yes</option>
+        <option value="1">No</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <h4>3) Does your child point to indicate thats?(e.g.a toy that is out of reach)</h4>
+      <!-- <input placeholder="if Yes means 0 No means 1" name = "q3" type="text" tabindex="1" required autofocus> -->
+      <select name="q3" >
+        <option  value="0">Yes</option>
+        <option value="1">No</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <h4>4) Does your child point to share interest with you?</h4>
+      <!-- <input placeholder="if Yes means 0 No means 1" name = "q4" type="text" tabindex="1" required autofocus> -->
+      <select name="q4" >
+        <option  value="0">Yes</option>
+        <option value="1">No</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <h4>5) Does your child pretend?(e.g.care for dolls,talk on a toy phone)</h4>
+      <!-- <input placeholder="if Yes means 0 No means 1" name = "q5" type="text" tabindex="1" required autofocus> -->
+      <select name="q5" >
+        <option  value="0">Yes</option>
+        <option value="1">No</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <h4>6) Does your child follow where you’re looking?</h4>
+      <!-- <input placeholder="if Yes means 0 No means 1" name = "q6" type="text" tabindex="1" required autofocus> -->
+      <select name="q6" >
+        <option  value="0">Yes</option>
+        <option value="1">No</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <h4>7) If you or someone else in the family is visibly upset?(e.g.stroking hair,hugging them) </h4>
+      <!-- <input placeholder="if Yes means 0 No means 1" name = "q7" type="text" tabindex="1" required autofocus> -->
+      <select name="q7" >
+        <option  value="0">Yes</option>
+        <option value="1">No</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <h4>8) Would you describe your child’s first words?</h4>
+      <!-- <input placeholder="if Yes means 0 No means 1" name = "q8" type="text" tabindex="1" required autofocus> -->
+      <select name="q8" >
+        <option  value="0">Yes</option>
+        <option value="1">No</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <h4>9) Does your child use simple gestures?(e.g.wave goodbye)</h4>
+      <!-- <input placeholder="if Yes means 0 No means 1" name = "q9" type="text" tabindex="1" required autofocus> -->
+      <select name="q9" >
+        <option  value="0">Yes</option>
+        <option value="1">No</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <h4>10) Does your child stare at nothing with no apparent purpose?</h4>
+      <!-- <input placeholder="if Yes means 0 No means 1" name = "q10" type="text" tabindex="1" required autofocus> -->
+      <select name="q10" >
+        <option  value="0">Yes</option>
+        <option value="1">No</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <h4>11) Enter the Child Age as Month?</h4>
+      <!-- <input placeholder="Your Age shoud 12 to 36 months" type="text" name = "q11" tabindex="1" required autofocus> -->
+      <select name="q11" >
+        <option  value="12">1 Year</option>
+        <option value="24">2 Year</option>
+        <option  value="36">3 Year</option>
+
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <h4>12) Enter the Child Gender ?</h4>
+      <!-- <input placeholder="Male 0 Female 1" name = "q12" type="text" tabindex="1" required autofocus> -->
+      <select name="q12" >
+        <option  value="0">Male</option>
+        <option value="1">Female</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <h4>13) Does your child have Jaundice?</h4>
+      <!-- <input placeholder="if Yes means 1 No means 0" name = "q13" type="text" tabindex="1" required autofocus> -->
+      <select name="q13" >
+        <option  value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <h4>14) Does your Family Members have ASD?</h4>
+      <!-- <input placeholder="if Yes means 1 No means 0" name = "q14" type="text" tabindex="1" required autofocus> -->
+      <select name="q14" >
+        <option  value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <h4>15) Who compleate the test?</h4>
+      <!-- <input placeholder="fmiy=0 Healthscare=1 Self=2 Others=3" type="text" name = "q15" tabindex="1" required autofocus/> -->
+      <select name="q15" >
+        <option  value="0">Family_Member</option>
+        <option value="1">Helth Care</option>
+        <option value="2">Self</option>
+        <option value="3">Others</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset></center>
+
+  </form>
+</div>
+
+  </body>
+
+</html>
